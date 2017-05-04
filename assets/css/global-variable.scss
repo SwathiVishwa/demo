@@ -43,3 +43,10 @@ $genPadding: 0px 15px 0px 15px;
       -ms-transform: translate($transX,$transY);
           transform: translate($transX,$transY);
 }
+@mixin transition($all, $timing, $duration){
+	transition: $all $timing $duration;
+	-webkit-transition: $all $timing $duration;
+	-moz-transition: $all $timing $duration;
+	-ms-transition: $all $timing $duration;
+	-o-transition: $all $timing $duration;
+}

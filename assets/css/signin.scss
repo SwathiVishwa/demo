@@ -1,4 +1,5 @@
 @import 'global-variable';
+@import 'btn';
 
 html, body {
 	height: 100%;
@@ -59,27 +60,10 @@ html, body {
 	
 }
 
-.btn {
-	&.btn{
-		&-rounded {
-			border-radius: 30px !important;
-		}
-		
-	}
-}
-a {
+
+a, a:visited, a:active, a:hover, a.active, a.active:visited, a.active:active, a.active:hover {
 	color: $primary;
 	text-decoration: none !important;
-	&:hover{
-		color: $primary ;
-	}
 }
 
 
-@each $btn, $bg, $font, $border in (primary, $primary, $white, $primary), (secondary, green, $white, green){
-	.btn-#{$btn}{
-		background-color: $bg;
-		color: $font;
-		border-color: $border;
-	}
-}

@@ -1,0 +1,43 @@
+@import 'global-variable';
+.btn {
+	&.btn{
+		&-rounded {
+			border-radius: 30px !important;
+		}
+		
+	}
+}
+//@each $btn, $bg, $font, $border in (primary, $primary, $white, $primary), (secondary, green, $white, green){
+//	.btn-#{$btn}, .btn-#{$btn}.active{
+//			background-color: $bg;
+//			color: $font;
+//			border-color: $primary;
+//			@include transition( all , linear ,0.25s);
+//	&:hover, &:focus, &:visited{
+//			opacity:0.9;
+//			background-color: $bg;
+//			color: $font;
+//			border-color: $primary;	
+//		}
+//		&:active {
+//			&:hover, &:focus, &:visited{
+//				background-color: $bg;
+//			color: $font;
+//			border-color: $primary;
+//}
+//		}
+//	}
+//}
+
+	.btn-primary, .btn-primary:active, .btn-primary.active{
+		background-color: $primary;
+		color: $white;
+			border-color: $primary;
+		@include transition( all , linear ,0.25s);
+	
+	&:hover, &:focus, &:visited {
+		@extend .btn-primary;
+		background-color: $primary - 20 !important;
+		border-color: $primary - 20 !important;
+	}
+	}
